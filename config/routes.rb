@@ -1,7 +1,7 @@
 MapsExample::Application.routes.draw do
 
   root "maps#index"
-  resources :maps
+  resources :maps, except: [:update, :edit, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

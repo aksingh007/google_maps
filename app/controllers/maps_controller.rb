@@ -1,10 +1,19 @@
 class MapsController < ApplicationController
   def index
     @maps = Map.order('created_at DESC')
+    @hash = Gmaps4rails.build_markers(@maps) do |map, marker|
+      marker.lat map.latitude
+      marker.lng map.longitude
+      marker.infowindow render_to_string(partial: "/maps/map_box", locals: { map: map })
+    end
   end
 
   def new
-    @maps = Map.new
+    @map = Map.new
+  end
+
+  def show
+    @map = Map.find(params[:id])
   end
 
   def create

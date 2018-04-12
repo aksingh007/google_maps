@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: maps_example_development
+  pool: 5
+  username: postgres
+  password: aks
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: maps_example_test
+  pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: maps_example_production
+  pool: 5

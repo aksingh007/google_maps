@@ -3,8 +3,7 @@ development:
   encoding: unicode
   database: maps_example_development
   pool: 5
-  username: postgres
-  password: aks
+  username:
 
 test:
   adapter: postgresql

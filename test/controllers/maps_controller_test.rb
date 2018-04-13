@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class FlatsControllerTest < ActionController::TestCase
+class MapsControllerTest < ActionController::TestCase
   setup do
-    @flat = flats(:one)
+    @map = maps(:one)
   end
 
   test "should get index" do

@@ -1,6 +1,6 @@
 class MapsController < ApplicationController
   def index
-    @maps = Map.order('created_at DESC')
+    @maps = Map.where.not(latitude: nil, longitude: nil).order('created_at DESC')
     @hash = Gmaps4rails.build_markers(@maps) do |map, marker|
       marker.lat map.latitude
       marker.lng map.longitude

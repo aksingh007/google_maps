@@ -13,6 +13,8 @@
         <div class="row-fluid col-md-6">
           <h2><%= link_to map.title, map %></h2>
           <p><%= map.address %></p>
+          <p>Latitude: <%= map.latitude %></p>
+          <p>Longitude: <%= map.longitude %></p>
           <%= link_to "Edit", edit_map_path(map), class: "btn btn-default" %>
           or
           <%= link_to "delete", map, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"  %>

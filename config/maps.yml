@@ -1,9 +1,2 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  name: MyString
-  address: MyString
-
-two:
-  name: MyString
-  address: MyString
+GOOGLE_SERVER_API_KEY: "AIzaSyCC_wbcpIVnKIuJfOQBiki07w3DvNSKzMg"

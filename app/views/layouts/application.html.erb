@@ -11,7 +11,7 @@
     <%= yield %>
   </div>
 
-  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCC_wbcpIVnKIuJfOQBiki07w3DvNSKzMg&callback=initMap" %>
+  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_SERVER_API_KEY"]}" %>
   <%= javascript_include_tag "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/markerclusterer/src/markerclusterer_compiled.js" %>
   <%= javascript_include_tag "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js" %>
 

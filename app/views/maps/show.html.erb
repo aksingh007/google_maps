@@ -2,5 +2,5 @@
 
 <p>Address: <%= @map.address %></p>
 <p>Coordinates: <%= @map.latitude %> <%= @map.longitude %></p>
-<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@map.latitude},#{@map.longitude}&markers=#{@map.latitude},#{@map.longitude}&zoom=7&size=640x400&key=AIzaSyCC_wbcpIVnKIuJfOQBiki07w3DvNSKzMg",
+<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@map.latitude},#{@map.longitude}&markers=#{@map.latitude},#{@map.longitude}&zoom=7&size=640x400&key=#{ENV["GOOGLE_SERVER_API_KEY"]}",
               class: 'img-fluid img-rounded', alt: "#{@map.title} on the map"%>

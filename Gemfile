@@ -15,6 +15,10 @@ gem "coffee-rails"
 
 gem "geocoder"
 gem "gmaps4rails"
+group :development, :test do
+  gem 'pry-rails'
+  gem 'parallel_tests'
+end
 
 source "https://rails-assets.org" do
   gem "rails-assets-underscore"

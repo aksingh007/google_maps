@@ -9,10 +9,12 @@
 
     <hr>
     <% @maps.each do |map| %>
-        <div class="row-fluid">
+        <div class="row-fluid col-md-6">
           <h2><%= link_to map.title, map %></h2>
           <p><%= map.address %></p>
-          <%= link_to "delete", map, method: :delete, data: { confirm: 'Are you sure?' }  %>
+          <%= link_to "Edit", edit_map_path(map), class: "btn btn-default" %>
+          or
+          <%= link_to "delete", map, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"  %>
         </div>
     <% end %>
   </div>

@@ -33,12 +33,12 @@ class MapsController < ApplicationController
   end
 
   def create
-    @maps = Map.new(map_params)
-    if @maps.save
+    @map = Map.new(map_params)
+    if @map.save
       flash[:success] = "Map place added!"
       redirect_to root_path
     else
-      render 'new'
+      render action: 'new'
     end
   end
 
